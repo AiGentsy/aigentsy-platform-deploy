@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AiGentsy Modular Dashboard</title>
+  <title>AiGentsy Enhanced Dashboard</title>
   <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="/script.js" defer></script>
 </head>
@@ -12,6 +13,7 @@
   <aside class="sidebar">
     <div class="logo">AiGentsy</div>
     <ul>
+      <li><a href="#" onclick="activateDashboard()">Dashboard</a></li>
       <li>
         <a href="#" onclick="toggleDropdown('vaults')">Vaults ▾</a>
         <ul class="dropdown" id="vaults-dropdown">
@@ -24,13 +26,6 @@
         <ul class="dropdown" id="exchange-dropdown">
           <li><a href="#" onclick="activateProtocol('aigx-market')">AIGx Market</a></li>
           <li><a href="#" onclick="activateProtocol('credit-stake')">Credit Staking</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" onclick="toggleDropdown('arena')">Arena ▾</a>
-        <ul class="dropdown" id="arena-dropdown">
-          <li><a href="#" onclick="activateProtocol('challenge-battles')">Challenge Battles</a></li>
-          <li><a href="#" onclick="activateProtocol('clone-racing')">Clone Racing</a></li>
         </ul>
       </li>
     </ul>

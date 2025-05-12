@@ -1,8 +1,9 @@
+
 body {
   margin: 0;
   background: #0a0a0a;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   display: flex;
 }
 .sidebar {
@@ -14,7 +15,7 @@ body {
 .sidebar .logo {
   color: #00ccff;
   font-size: 1.8em;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 1em;
   text-shadow: 0 0 8px #00ccff;
 }
