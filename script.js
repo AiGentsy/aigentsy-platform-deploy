@@ -1,10 +1,17 @@
+function loadPage(page) {
+  const content = document.getElementById('page-content');
+  content.classList.remove('fade-in');
+  void content.offsetWidth;
 
-const pages = {
-  dashboard: `
-    <h1>Dashboard</h1>
-    <p>Welcome to your AiGentsy operator control panel.</p>
-    <canvas id="gdpChart" width="400" height="150"></canvas>
-    <script>
+  let html = '';
+  if (page === 'dashboard') {
+    html = `
+      <div class="panel">
+        <h2>Operator Dashboard</h2>
+        <canvas id="gdpChart" height="100"></canvas>
+      </div>
+    `;
+    setTimeout(() => {
       const ctx = document.getElementById('gdpChart').getContext('2d');
       new Chart(ctx, {
         type: 'line',
@@ -19,18 +26,18 @@ const pages = {
           }]
         }
       });
-    </script>
-  `,
-  vaults: "<h1>Vaults</h1><p>Manage, launch, and monitor your active agent vaults here.</p>",
-  exchange: "<h1>Exchange</h1><p>Trade agent-backed performance instruments in the AIGx market.</p>",
-  arena: "<h1>Agent Arena</h1><p>Compete, clone, and test your agents in open protocol challenges.</p>"
-};
+    }, 100);
+  } else if (page === 'vaults') {
+    html = `<div class="panel"><h2>Vaults</h2><p>Launch and monitor performance-based agent vaults.</p></div>`;
+  } else if (page === 'exchange') {
+    html = `<div class="panel"><h2>Exchange</h2><p>Trade synthetic assets and stake remix-backed credits.</p></div>`;
+  } else if (page === 'arena') {
+    html = `<div class="panel"><h2>Arena</h2><p>Compete in merit battles or remix challenges across realms.</p></div>`;
+  } else {
+    html = `<div class="panel"><h2>404</h2><p>Page not found.</p></div>`;
+  }
 
-function loadPage(page) {
-  const content = document.getElementById("content");
-  content.classList.remove("fade-in");
-  void content.offsetWidth; // trigger reflow
-  content.innerHTML = pages[page] || "<p>Page not found.</p>";
-  content.classList.add("fade-in");
+  content.innerHTML = html;
+  content.classList.add('fade-in');
 }
 window.onload = () => loadPage('dashboard');

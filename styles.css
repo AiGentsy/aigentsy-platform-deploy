@@ -1,17 +1,70 @@
-
-body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #000; color: #fff; display: flex; }
-.sidebar { width: 240px; background: #0b0c10; padding: 2em 1em; min-height: 100vh; box-shadow: 2px 0 6px rgba(0,0,0,0.5); }
-.sidebar h2 { color: #00ccff; margin-bottom: 1em; font-size: 1.5em; }
-.sidebar ul { list-style: none; padding: 0; }
-.sidebar ul li { margin-bottom: 1em; }
-.sidebar ul li a { color: #ccc; text-decoration: none; transition: color 0.3s, transform 0.2s; display: block; }
-.sidebar ul li a:hover { color: #00ccff; transform: translateX(5px); }
-
-.main-content { flex: 1; padding: 2em; transition: opacity 0.3s ease; }
-footer { margin-top: 4em; color: #555; text-align: center; }
-.fade-in { animation: fadein 0.6s ease-in; }
-
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+}
+.sidebar {
+  width: 250px;
+  background: #0b0c10;
+  padding: 1.5em;
+  box-shadow: 2px 0 10px rgba(0, 204, 255, 0.3);
+}
+.sidebar .logo {
+  color: #00ccff;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  text-shadow: 0 0 8px #00ccff;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin: 1em 0;
+}
+.sidebar ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  padding: 0.4em;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.sidebar ul li a:hover {
+  background: rgba(0, 204, 255, 0.1);
+  color: #00ccff;
+  transform: translateX(5px);
+}
+.main-content {
+  flex: 1;
+  padding: 2em;
+}
+footer {
+  text-align: center;
+  color: #555;
+  margin-top: 3em;
+  font-size: 0.9em;
+}
+.fade-in {
+  animation: fadein 0.5s ease-in;
+}
 @keyframes fadein {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+.panel {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 0 10px rgba(0,204,255,0.1);
+}
+.panel h2 {
+  color: #00ccff;
+  margin-bottom: 0.5em;
 }

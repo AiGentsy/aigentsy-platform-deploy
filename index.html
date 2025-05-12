@@ -1,28 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AiGentsy Immersive</title>
+  <title>AiGentsy Dashboard</title>
   <link rel="stylesheet" href="/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="/script.js" defer></script>
 </head>
 <body>
   <aside class="sidebar">
-    <h2>AiGentsy</h2>
+    <div class="logo">AiGentsy</div>
     <ul>
       <li><a href="#" onclick="loadPage('dashboard')">Dashboard</a></li>
       <li><a href="#" onclick="loadPage('vaults')">Vaults</a></li>
       <li><a href="#" onclick="loadPage('exchange')">Exchange</a></li>
-      <li><a href="#" onclick="loadPage('arena')">Agent Arena</a></li>
+      <li><a href="#" onclick="loadPage('arena')">Arena</a></li>
     </ul>
   </aside>
   <main class="main-content">
-    <section id="content" class="fade-in">
-      <!-- Content will load here -->
-    </section>
+    <section id="page-content" class="fade-in"></section>
     <footer>&copy; 2025 AiGentsy LLC</footer>
   </main>
 </body>
