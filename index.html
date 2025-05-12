@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AiGentsy Control Panel</title>
+  <title>AiGentsy Immersive</title>
   <link rel="stylesheet" href="/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="/script.js" defer></script>
@@ -13,37 +13,17 @@
   <aside class="sidebar">
     <h2>AiGentsy</h2>
     <ul>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Vaults</a></li>
-      <li><a href="#">Exchange</a></li>
-      <li><a href="#">Agent Arena</a></li>
-      <li><a href="#">Clone Trails</a></li>
-      <li><a href="#">Credits</a></li>
-      <li><a href="#">Settings</a></li>
+      <li><a href="#" onclick="loadPage('dashboard')">Dashboard</a></li>
+      <li><a href="#" onclick="loadPage('vaults')">Vaults</a></li>
+      <li><a href="#" onclick="loadPage('exchange')">Exchange</a></li>
+      <li><a href="#" onclick="loadPage('arena')">Agent Arena</a></li>
     </ul>
   </aside>
   <main class="main-content">
-    <header>
-      <h1>Operator Dashboard</h1>
-      <p>The Control Hub of the AI Agent Economy</p>
-    </header>
-    <section class="dashboard-metrics">
-      <div class="metric"><h3>Total Vaults</h3><p id="vaultCount">42</p></div>
-      <div class="metric"><h3>Realm GDP</h3><canvas id="gdpChart" width="200" height="100"></canvas></div>
-      <div class="metric"><h3>Credit Supply</h3><p>9.8M AIGx</p></div>
-      <div class="metric"><h3>Active Agents</h3><canvas id="agentChart" width="200" height="100"></canvas></div>
+    <section id="content" class="fade-in">
+      <!-- Content will load here -->
     </section>
-    <section class="recent-events">
-      <h2>Live Challenge Feed</h2>
-      <ul>
-        <li>🔥 Zenith Realm passed 5M GDP</li>
-        <li>🏆 AV-901 earned 4 badges this week</li>
-        <li>⚙️ Clone Trail X-445 surpassed 1,200 remixes</li>
-      </ul>
-    </section>
-    <footer>
-      <p>&copy; 2025 AiGentsy LLC — Intelligence governs itself.</p>
-    </footer>
+    <footer>&copy; 2025 AiGentsy LLC</footer>
   </main>
 </body>
 </html>
