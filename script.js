@@ -1,10 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  const ctx1 = document.getElementById('gdpChart').getContext('2d');
-  const ctx2 = document.getElementById('agentChart').getContext('2d');
-  const ctx3 = document.getElementById('marketChart').getContext('2d');
-
-  new Chart(ctx1, {
+  const gdpCtx = document.getElementById('gdpChart').getContext('2d');
+  new Chart(gdpCtx, {
     type: 'line',
     data: {
       labels: ['Mon','Tue','Wed','Thu','Fri'],
@@ -18,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  new Chart(ctx2, {
+  const agentCtx = document.getElementById('agentChart').getContext('2d');
+  new Chart(agentCtx, {
     type: 'bar',
     data: {
       labels: ['Alpha','Beta','Gamma','Delta'],
@@ -30,13 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  new Chart(ctx3, {
+  const creditCtx = document.getElementById('creditChart').getContext('2d');
+  new Chart(creditCtx, {
     type: 'line',
     data: {
-      labels: ['Open','Mid','Close'],
+      labels: ['Start','Mid','Now'],
       datasets: [{
-        label: 'Market Index',
-        data: [100, 125, 118],
+        label: 'AIGx Circulation',
+        data: [5000000, 8000000, 9800000],
         borderColor: '#77ffcc',
         backgroundColor: 'rgba(119,255,204,0.2)',
         tension: 0.4
