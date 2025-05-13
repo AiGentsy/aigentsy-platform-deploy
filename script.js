@@ -1,45 +1,38 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-  const gdpCtx = document.getElementById('gdpChart').getContext('2d');
-  new Chart(gdpCtx, {
-    type: 'line',
-    data: {
-      labels: ['Mon','Tue','Wed','Thu','Fri'],
-      datasets: [{
-        label: 'Realm GDP',
-        data: [2.3, 2.9, 3.8, 5.2, 5.8],
-        borderColor: '#8c52ff',
-        backgroundColor: 'rgba(140,82,255,0.2)',
-        tension: 0.3
-      }]
-    }
-  });
+function toggleDropdown(id) {
+  const el = document.getElementById(id + '-dropdown');
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
 
-  const agentCtx = document.getElementById('agentChart').getContext('2d');
-  new Chart(agentCtx, {
-    type: 'bar',
-    data: {
-      labels: ['Alpha','Beta','Gamma','Delta'],
-      datasets: [{
-        label: 'Active Agents',
-        data: [120, 160, 130, 210],
-        backgroundColor: '#ff4da6'
-      }]
-    }
-  });
+function loadSection(section) {
+  const el = document.getElementById('protocol-area');
+  let colorMap = {
+    'yield-vaults': '#8c52ff',
+    'reputation-vaults': '#ff4da6',
+    'aigx-market': '#77ffcc',
+    'synthetic-indexes': '#00ccff',
+    'dashboard': '#8c52ff',
+    'clone-trees': '#ff4da6',
+    'challenge-bounties': '#77ffcc',
+    'rank-ladder': '#00ccff'
+  };
+  const color = colorMap[section] || '#00ccff';
 
-  const creditCtx = document.getElementById('creditChart').getContext('2d');
-  new Chart(creditCtx, {
-    type: 'line',
-    data: {
-      labels: ['Start','Mid','Now'],
-      datasets: [{
-        label: 'AIGx Circulation',
-        data: [5000000, 8000000, 9800000],
-        borderColor: '#77ffcc',
-        backgroundColor: 'rgba(119,255,204,0.2)',
-        tension: 0.4
-      }]
-    }
-  });
-});
+  el.innerHTML = '<canvas id="protoChart"></canvas>';
+  setTimeout(() => {
+    const ctx = document.getElementById('protoChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Mon','Tue','Wed','Thu','Fri'],
+        datasets: [{
+          label: section.replace('-', ' ').toUpperCase(),
+          data: [2.3, 2.8, 3.5, 4.9, 5.5],
+          borderColor: color,
+          backgroundColor: color + '33',
+          tension: 0.4
+        }]
+      }
+    });
+  }, 200);
+}

@@ -3,18 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AiGentsy Enhanced Dashboard</title>
+  <title>AiGentsy Protocol Builder</title>
   <link rel="stylesheet" href="/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="/script.js" defer></script>
 </head>
 <body>
-  <aside class="sidebar"><div class="logo"><span style="color:#fff;">i</span>Gentsy</div></aside>
+  <aside class="sidebar">
+    <div class="logo">Ai<span style="color:white;">G</span>entsy</div>
+    <ul>
+      <li><a href="#" onclick="loadSection('dashboard')">Dashboard</a></li>
+      <li><a href="#" onclick="toggleDropdown('vaults')">Vaults ▾</a>
+        <ul class="dropdown" id="vaults-dropdown">
+          <li><a href="#" onclick="loadSection('yield-vaults')">Yield Vaults</a></li>
+          <li><a href="#" onclick="loadSection('reputation-vaults')">Reputation Vaults</a></li>
+          <li><a href="#" onclick="loadSection('clone-trees')">Clone Trees</a></li>
+        </ul>
+      </li>
+      <li><a href="#" onclick="toggleDropdown('exchange')">Exchange ▾</a>
+        <ul class="dropdown" id="exchange-dropdown">
+          <li><a href="#" onclick="loadSection('aigx-market')">AIGx Market</a></li>
+          <li><a href="#" onclick="loadSection('synthetic-indexes')">Synthetic Indexes</a></li>
+        </ul>
+      </li>
+      <li><a href="#" onclick="toggleDropdown('arena')">Arena ▾</a>
+        <ul class="dropdown" id="arena-dropdown">
+          <li><a href="#" onclick="loadSection('challenge-bounties')">Challenge Bounties</a></li>
+          <li><a href="#" onclick="loadSection('rank-ladder')">Rank Ladder</a></li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
   <main class="main-content">
     <h1 class="page-title">Operator Dashboard</h1>
-    <canvas id="gdpChart" height="100"></canvas>
-    <canvas id="agentChart" height="100"></canvas>
-    <canvas id="creditChart" height="100"></canvas>
+    <section id="protocol-area" class="fade-in"></section>
     <footer>&copy; 2025 AiGentsy LLC</footer>
   </main>
 </body>
