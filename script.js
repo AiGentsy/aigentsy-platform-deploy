@@ -1,1 +1,1 @@
-// Final working JS with sidebar toggles, charts, metrics
+// Final JavaScript for sidebar toggles, charts, interactivity
