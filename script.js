@@ -1,1 +1,1 @@
-// Functional JS including silo toggles and charts
+// Final working JS with sidebar toggles, charts, metrics
