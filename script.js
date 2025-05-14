@@ -1,27 +1,44 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    const ctx1 = document.getElementById("chart1").getContext("2d");
-    const ctx2 = document.getElementById("chart2").getContext("2d");
-    new Chart(ctx1, {
+    const ctx = document.getElementById("growthChart").getContext("2d");
+    new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr'],
-            datasets: [{
-                label: 'Revenue',
-                data: [1000, 2000, 3000, 4000],
-                borderColor: '#ff00ff'
-            }]
-        }
-    });
-    new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: ['Agents', 'Vaults', 'Remixes'],
-            datasets: [{
-                label: 'Counts',
-                data: [500, 800, 1200],
-                backgroundColor: '#00ffaa'
-            }]
+            labels: ['Y1', 'Y2', 'Y3'],
+            datasets: [
+                {
+                    label: 'Revenue',
+                    data: [2000, 4500, 8000],
+                    borderColor: '#38bdf8',
+                    tension: 0.4
+                },
+                {
+                    label: 'Agents',
+                    data: [1000, 3000, 6000],
+                    borderColor: '#a78bfa',
+                    tension: 0.4
+                },
+                {
+                    label: 'Vaults',
+                    data: [500, 2000, 4000],
+                    borderColor: '#5eead4',
+                    tension: 0.4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white'
+                    }
+                }
+            },
+            scales: {
+                x: { ticks: { color: 'white' } },
+                y: { ticks: { color: 'white' } }
+            }
         }
     });
 });
