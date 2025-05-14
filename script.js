@@ -1,1 +1,1 @@
-// All frontend logic for charts, toggles, and silo displays
+// Functional JS including silo toggles and charts
