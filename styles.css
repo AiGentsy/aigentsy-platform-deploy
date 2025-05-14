@@ -1,7 +1,0 @@
-
-body { background: #0a0a0a; font-family: 'Inter', sans-serif; color: #fff; display: flex; }
-.sidebar { width: 250px; background: #0b0c10; padding: 1.5em; box-shadow: 2px 0 10px rgba(0,204,255,0.3); }
-.sidebar ul li a:hover { color: #00ccff; transform: translateX(5px); }
-.dropdown { display: none; margin-left: 1em; list-style: none; }
-.main-content { padding: 2em; flex-grow: 1; }
-canvas { background: #111; border-radius: 8px; margin: 1em 0; width: 100%; }
