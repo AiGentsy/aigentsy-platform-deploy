@@ -1,2 +1,37 @@
 <!DOCTYPE html>
-<!-- Final working HTML for AiGentsy launch -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AiGentsy Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1 class="logo">AiGentsy</h1>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Vaults</li>
+      </ul>
+    </aside>
+    <!-- Main Content -->
+    <main class="content">
+      <section id="dashboard">
+        <h2>Dashboard</h2>
+        <canvas id="dashboardChart"></canvas>
+      </section>
+      <section id="vaults">
+        <h2>Vaults</h2>
+        <div class="vault-toggle">
+          <button id="performanceBtn" class="active">Performance Vaults</button>
+          <button id="remixBtn">Remix Vaults</button>
+        </div>
+        <canvas id="vaultsChart"></canvas>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

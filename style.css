@@ -1,1 +1,55 @@
-/* Final working immersive CSS styling */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
+.sidebar {
+  width: 200px;
+  float: left;
+  background: #111;
+  padding: 20px;
+  height: 100vh;
+}
+.sidebar .logo {
+  font-size: 24px;
+  color: #00ffff;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px;
+  color: #ccc;
+  cursor: pointer;
+}
+.sidebar ul li.active, .sidebar ul li:hover {
+  color: #00ffff;
+}
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
+canvas {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+.vault-toggle {
+  margin-bottom: 10px;
+}
+.vault-toggle button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  background: #222;
+  color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+.vault-toggle button.active {
+  background: #00ffff;
+  color: #000;
+}
