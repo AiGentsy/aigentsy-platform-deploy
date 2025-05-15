@@ -1,38 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const ctx1 = document.getElementById("dashboardChart").getContext("2d");
-  new Chart(ctx1, {
+document.addEventListener("DOMContentLoaded", function () {
+  const ctx = document.getElementById("forecastChart").getContext("2d");
+  new Chart(ctx, {
     type: "line",
     data: {
-      labels: ["Jan", "Feb", "Mar"],
+      labels: ["Year 1", "Year 2", "Year 3"],
       datasets: [{
-        label: "Growth",
-        data: [100, 300, 600],
+        label: "Revenue Forecast",
+        data: [200, 600, 1200],
         borderColor: "#00ffff",
-        fill: false
+        backgroundColor: "rgba(0,255,255,0.2)",
+        fill: true,
+        tension: 0.4
       }]
+    },
+    options: {
+      plugins: {
+        legend: { labels: { color: "#fff" } }
+      },
+      scales: {
+        x: { ticks: { color: "#ccc" } },
+        y: { ticks: { color: "#ccc" } }
+      }
     }
   });
-
-  const ctx2 = document.getElementById("vaultsChart").getContext("2d");
-  const vaultChart = new Chart(ctx2, {
-    type: "bar",
-    data: {
-      labels: ["Vault A", "Vault B", "Vault C"],
-      datasets: [{
-        label: "Value",
-        data: [200, 150, 400],
-        backgroundColor: "#00ffff"
-      }]
-    }
-  });
-
-  document.getElementById("performanceBtn").onclick = () => {
-    vaultChart.data.datasets[0].data = [200, 150, 400];
-    vaultChart.update();
-  };
-
-  document.getElementById("remixBtn").onclick = () => {
-    vaultChart.data.datasets[0].data = [300, 500, 250];
-    vaultChart.update();
-  };
 });

@@ -1,19 +1,22 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #0a0a0a;
+  background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
   color: #fff;
 }
-.sidebar {
-  width: 200px;
-  float: left;
-  background: #111;
-  padding: 20px;
+.app {
+  display: flex;
   height: 100vh;
 }
-.sidebar .logo {
-  font-size: 24px;
+.sidebar {
+  width: 220px;
+  background: #111;
+  padding: 20px;
+}
+.logo {
   color: #00ffff;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .sidebar ul {
   list-style: none;
@@ -24,32 +27,29 @@ body {
   color: #ccc;
   cursor: pointer;
 }
-.sidebar ul li.active, .sidebar ul li:hover {
+.sidebar ul li.active {
   color: #00ffff;
+  font-weight: bold;
 }
 .content {
-  margin-left: 200px;
-  padding: 20px;
+  flex: 1;
+  padding: 40px;
+}
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.charts {
+  margin-bottom: 30px;
 }
 canvas {
-  background: #1a1a1a;
-  border-radius: 8px;
-  padding: 10px;
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 }
-.vault-toggle {
-  margin-bottom: 10px;
-}
-.vault-toggle button {
-  margin-right: 10px;
-  padding: 6px 12px;
-  background: #222;
-  color: #ccc;
-  border: none;
-  cursor: pointer;
-}
-.vault-toggle button.active {
-  background: #00ffff;
-  color: #000;
+.metrics p {
+  margin: 6px 0;
+  font-size: 16px;
 }

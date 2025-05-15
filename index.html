@@ -5,32 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AiGentsy Platform</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div id="app">
-    <!-- Sidebar -->
+  <div class="app">
     <aside class="sidebar">
       <h1 class="logo">AiGentsy</h1>
-      <ul>
-        <li class="active">Dashboard</li>
-        <li>Vaults</li>
-      </ul>
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li><a href="sections/vaults.html">Vaults</a></li>
+        </ul>
+      </nav>
     </aside>
-    <!-- Main Content -->
     <main class="content">
-      <section id="dashboard">
-        <h2>Dashboard</h2>
-        <canvas id="dashboardChart"></canvas>
-      </section>
-      <section id="vaults">
-        <h2>Vaults</h2>
-        <div class="vault-toggle">
-          <button id="performanceBtn" class="active">Performance Vaults</button>
-          <button id="remixBtn">Remix Vaults</button>
-        </div>
-        <canvas id="vaultsChart"></canvas>
-      </section>
+      <h2 class="section-title">Forecast Summary</h2>
+      <div class="charts">
+        <canvas id="forecastChart"></canvas>
+      </div>
+      <div class="metrics">
+        <p>$8B+ Annual Revenue</p>
+        <p>100M+ Active Agents</p>
+        <p>10M+ Agent Vaults</p>
+        <p>Monetization: Lending, Premium, Insurance</p>
+        <p>20B Transactions</p>
+        <p>90% Sentinel Adoption</p>
+      </div>
     </main>
   </div>
 </body>
