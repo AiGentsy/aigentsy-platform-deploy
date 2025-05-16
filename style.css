@@ -1,10 +1,10 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
+  background: #0a0a0a;
   color: #fff;
 }
-.app {
+.dashboard-app {
   display: flex;
   height: 100vh;
 }
@@ -31,25 +31,43 @@ body {
   color: #00ffff;
   font-weight: bold;
 }
-.content {
+.dashboard-main {
   flex: 1;
   padding: 40px;
 }
 .section-title {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 20px;
 }
-.charts {
-  margin-bottom: 30px;
+.dashboard-grid {
+  display: flex;
+  gap: 40px;
 }
-canvas {
-  background: #1f1f1f;
+.kpi-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.kpi {
+  font-size: 16px;
+  padding: 10px;
+  background: linear-gradient(to right, #1a1a1a, #222);
+  border-left: 4px solid #00ffff;
+  border-radius: 6px;
+}
+.chart-area {
+  flex: 1;
+  background: #1a1a1a;
   border-radius: 12px;
   padding: 20px;
-  width: 100%;
-  max-width: 700px;
 }
-.metrics p {
-  margin: 6px 0;
-  font-size: 16px;
+canvas {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+}
+.tagline {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
 }
